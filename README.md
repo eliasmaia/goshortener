@@ -27,5 +27,30 @@ Este projeto demonstra os pilares fundamentais do ecossistema Go: performance, b
 ### Instalação
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/eliasmaia/goshortener.git](https://github.com/eliasmaia/goshortener.git)
+   git clone https://github.com/eliasmaia/goshortener.git
    cd go-shortener
+
+2. Instale as dependências:
+    ```bash
+    go mod tidy
+
+3. Execute o projeto:
+    ```bash
+    go run .
+## 🧪 Como Testar
+1. Criar um link encurtado (POST)
+    ```bash
+    curl -X POST -H "Content-Type: application/json" \
+    -d '{"url": "[https://www.google.com](https://www.google.com)"}' \
+    http://localhost:8080/shorten
+    ```
+2. Acessar o redirecionamento (navegador)
+Abra no seu navegador: 
+    ``` http://localhost:8080/{codigo_gerado} ```
+
+## 📁 Estrutura do Projeto
+- main.go: Entrada da aplicação e handlers da API.
+- db.go: Configuração e inicialização do SQLite.
+- go.mod: Definição do módulo e dependências.
+
+Desenvolvido por Elias Maia
