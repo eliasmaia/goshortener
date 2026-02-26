@@ -41,7 +41,7 @@ Este projeto demonstra os pilares fundamentais do ecossistema Go: performance, b
 1. Criar um link encurtado (POST)
     ```bash
     curl -X POST -H "Content-Type: application/json" \
-    -d '{"url": "[https://www.google.com](https://www.google.com)"}' \
+    -d '{"url": "https://www.google.com"}' \
     http://localhost:8080/shorten
     ```
 2. Acessar o redirecionamento (navegador)
